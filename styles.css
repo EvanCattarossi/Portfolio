@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  }
+  
+  body{
+      background: #080808;
+      color : #fff;
+      
+  }
+  
+  #header {
+     padding: 20px;
+      
+    }
+    
+    .container {
+      max-width: 1200px; /* Largeur maximale du contenu */
+      margin:  auto; /* Centre le contenu horizontalement */
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      width: 100%; /* Assure que la navbar prend toute la largeur disponible */
+      background-color: #f0f0f0; /* Couleur de fond par exemple */
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px; /* Espacement entre les éléments de navigation */
+      text-align: center;
+    }
+    
+    nav ul li {
+      position: relative; /* Pour positionner le sous-menu */
+    }
+    
+   
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    
+    nav ul li a:hover {
+      background-color: #8a87877a;
+    }
+    
+    .logo {
+      width: 100px; 
+      height: auto;
+      margin-right: 200px;
+    }

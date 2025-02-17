@@ -1,0 +1,877 @@
+/* General Styles */
+header {
+  background-color: #647e7e; /* Background color */
+  color: #ffffff; /* Text color */
+  padding: 10px 20px; /* Spacing inside the header */
+  box-shadow: 0 4px 6px rgba(31, 218, 231, 0.1); /* Subtle shadow for depth */
+  position: fixed; /* Keeps header at the top */
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Container */
+.boxed {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Flex Utility */
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.aligncenter {
+  align-items: center;
+}
+
+/* Logo Styles */
+.logo {
+  text-decoration: none;
+  color: #fff;
+}
+
+.h1-1 {
+  font-size: 1.5rem; /* Adjust the size of the logo text */
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Navigation Styles */
+.nav-bar {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Spacing between links */
+}
+
+.nav-bar li {
+  margin: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f39c12; /* Highlight color on hover */
+}
+
+/* Menu Toggle for Mobile */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: block; /* Show menu toggle for smaller screens */
+  }
+
+  .nav-bar {
+      flex-direction: column; /* Stack links vertically */
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: #222; /* Match header background */
+      width: 200px;
+      display: none; /* Hidden by default */
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-bar li {
+      text-align: right;
+      padding: 10px 20px;
+  }
+
+  .nav-bar.show {
+      display: flex; /* Show navigation when toggled */
+  }
+}
+
+/* Active Link Style */
+.nav-link.active {
+  color: #f39c12; /* Highlight color for the active link */
+}
+
+
+/* Section Styles */
+.section {
+  padding: 60px 20px; /* General padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh; /* Full viewport height */
+  background-color: #f5f5f5; /* Light background for contrast */
+  position: relative;
+}
+
+/* Accueil Specific Styles */
+.acc {
+  background: linear-gradient(135deg, #222, #444); /* Dark gradient background */
+  color: #fff; /* Light text for contrast */
+  padding: 40px 20px;
+  border-radius: 8px; /* Soft corners for card effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add some depth */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Space between elements */
+}
+
+/* Profile Image */
+.acc img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%; /* Circle shape */
+  border: 4px solid #f39c12; /* Border to highlight image */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Content */
+.accueil-content h1 {
+  font-size: 2.5rem; /* Large headline */
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.accueil-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #f39c12; /* Accent color */
+}
+
+/* Footer Social */
+.footer-social {
+  display: flex;
+  gap: 15px; /* Space between icons */
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #f1f1f0; /* Hover effect */
+  transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .accueil-content h1 {
+      font-size: 2rem;
+  }
+
+  .accueil-content h3 {
+      font-size: 1.2rem;
+  }
+
+  .footer-social a {
+      font-size: 1.2rem;
+  }
+}
+.cv-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cv-btn, .synthese-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 25px;
+  background-color: #007bff; 
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cv-btn i, .synthese-btn i {
+  margin-right: 10px;
+  font-size: 1.2rem; 
+}
+
+.cv-btn:hover, .synthese-btn:hover {
+  background-color: #0056b3; 
+  transform: translateY(-3px);
+}
+
+.cv-btn:active, .synthese-btn:active {
+  background-color: #003f7d; 
+  transform: translateY(1px); 
+}
+
+.cv-btn:focus, .synthese-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); 
+}
+
+
+
+
+
+/* Section Styles */
+.facts {
+  padding: 60px 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  color: #333; /* Text color */
+  font-family: 'Arial', sans-serif;
+}
+
+.facts .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #222;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.section-title p {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.section-title .neon2 {
+  color: #f39c12; /* Highlight color for BTS SIO */
+  font-weight: bold;
+  text-shadow: 0 0 5px #f39c12, 0 0 10px #f39c12;
+}
+
+.spec_bts {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+/* SISR and SLAM Boxes */
+.bts_sisr, .bts_slam {
+  background: #fff; /* White background for cards */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow for depth */
+  flex: 1 1 calc(45% - 20px); /* Responsive column width */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bts_sisr:hover, .bts_slam:hover {
+  transform: translateY(-10px); /* Lift effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Title and Icons */
+.bts_sisr h4, .bts_slam h4 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bts_sisr h4 i, .bts_slam h4 i {
+  font-size: 1.8rem;
+  color: #f39c12; /* Icon highlight color */
+}
+
+/* Description Text */
+.bts_sisr h6, .bts_slam h6 {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* List Styles */
+.bts_sisr ul, .bts_slam ul {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.bts_sisr ul li, .bts_slam ul li {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  list-style: none;
+  color: #333;
+}
+
+.bts_sisr ul li i, .bts_slam ul li i {
+  color: #f39c12;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Highlight for SLAM Specialization */
+.bts_slam .feure {
+  font-style: italic;
+  font-size: 1rem;
+  color: #f39c12;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bts_sisr, .bts_slam {
+      flex: 1 1 100%; /* Full width on smaller screens */
+  }
+
+  .section-title h2 {
+      font-size: 2rem;
+  }
+
+  .section-title p {
+      font-size: 0.9rem;
+  }
+}
+
+/* Section Skills */
+.skills {
+  padding: 50px 0;
+  background-color: #f4f4f9;
+  font-family: 'Arial', sans-serif;
+}
+
+.skills h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.skills h1::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: #3498db;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.skills p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+/* Slider container */
+.skills-slider {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.skills-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.skills-slider::-webkit-scrollbar-thumb {
+  background-color: #3498db;
+  border-radius: 4px;
+}
+
+/* Skill cards */
+.skill-card {
+  min-width: 250px;
+  max-width: 250px;
+  perspective: 1000px; /* To make the flip effect work */
+  scroll-snap-align: center;
+}
+
+/* Flipper */
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+/* Flip on hover */
+.skill-card:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+/* Front side of the card */
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.front img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.front h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Back side of the card */
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3498db;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transform: rotateY(180deg);
+}
+
+.back p {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Hover effect for the skill cards */
+.skill-card:hover .front {
+  transform: rotateY(-180deg);
+}
+
+
+
+
+
+
+/* Container de la section */
+.experience {
+  background-color: #f9f9f9;
+  padding: 80px 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+.experience h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.experience .timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: relative;
+  width: 50%;
+  padding-right: 40px;
+}
+
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #3498db;
+  border-radius: 50%;
+  top: 20px;
+  left: -7px;
+  z-index: 1;
+}
+
+.timeline-item.right:before {
+  left: auto;
+  right: -7px;
+}
+
+.timeline-item .timeline-content {
+  background: #fff;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.timeline-item .timeline-content h3 {
+  font-size: 1.5rem;
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+.timeline-item .timeline-content h4 {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.timeline-item .timeline-content p,
+.timeline-item .timeline-content ul {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.timeline-item .timeline-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Effet de transition */
+.timeline-item:hover .timeline-content {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item.left {
+  left: 0;
+  transform: translateX(-50px);
+}
+
+.timeline-item.right {
+  left: 50%;
+  transform: translateX(50px);
+}
+
+.timeline-item.left .timeline-content {
+  margin-left: 20px;
+}
+
+.timeline-item.right .timeline-content {
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline-item {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+
+  .timeline-item.left, .timeline-item.right {
+      left: 0;
+  }
+}
+
+/* General styles for the sections */
+#projets, #veilles-technologiques {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.portfolio-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Styling the individual portfolio items */
+.rn-portfolio-slick {
+  width: calc(33.333% - 20px);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rn-portfolio-slick:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Portfolio Thumbnail */
+.rn-portfolio .thumbnail {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.rn-portfolio .thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Veilles Technologiques section */
+#veilles-technologiques .category-info a {
+  font-weight: bold;
+  color: #444;
+}
+
+/* Styling the links */
+.rn-portfolio a {
+  transition: color 0.3s ease;
+}
+
+.rn-portfolio a:hover {
+  color: #007bff;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+  .rn-portfolio-slick {
+      width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .rn-portfolio-slick {
+      width: 100%;
+  }
+
+  .section-title h2 {
+      font-size: 2rem;
+  }
+}
+
+
+
+
+
+
+/* Global Styles for Contact Section */
+#contact {
+  padding: 60px 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #bdcdd0, #ffffff);
+  color: #333;
+}
+
+#contact .section-title h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #173b6c;
+  text-align: center;
+}
+
+#contact .section-title p {
+  font-size: 18px;
+  text-align: center;
+  color: #666;
+  margin: 10px 0 40px;
+}
+
+/* Info Box Styling */
+#contact .info {
+  background: #f9f9f9;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+#contact .info div {
+  margin-bottom: 20px;
+}
+
+#contact .info h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #173b6c;
+}
+
+#contact .info p {
+  font-size: 14px;
+  margin: 0;
+  color: #333;
+}
+
+#contact .info i {
+  font-size: 20px;
+  color: #173b6c;
+  margin-right: 10px;
+}
+
+/* Form Styling */
+#contact form {
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+#contact form label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #173b6c;
+}
+
+#contact form .form-control {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+#contact form .form-control:focus {
+  border-color: #173b6c;
+  outline: none;
+  box-shadow: 0 0 5px rgba(23, 59, 108, 0.3);
+}
+
+#contact form textarea {
+  resize: none;
+}
+
+#contact form button {
+  background: #173b6c;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+#contact form button:hover {
+  background: #145293;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #contact .info iframe {
+    width: 100%;
+    height: 300px;
+  }
+
+  #contact .info, #contact form {
+    margin-bottom: 30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ... Vos styles généraux ... */
+
+.contact {
+  text-align: center;
+  padding: 20px;
+}
+
+.contact form {
+  display: inline-block;
+}
+
+.contact input,
+.contact textarea {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.contact button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+}

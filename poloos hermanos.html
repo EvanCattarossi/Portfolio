@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:locale" content="fr_FR" />
+	<meta property="og:type" content="website" />
+
+
+
+    <title>Los Pollos Hermanos </title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="poloos hermanos.css" />
+    
+</head>
+
+<body>
+    <div id="background-container"></div> 
+    <header>
+        
+        <div id="section1">
+            <a href="">
+                <img src="asset/04.png"  alt="Logo " width="140" height="120"> 
+            </a>
+        </div>
+
+        <section>
+            <div id="menu">
+                <div id="section1">
+                <ul>
+                    <li><a href="#Àproposdemoi">Présentation</a></li>
+                    <li><a href="#BTSSIO">Carte</a></li>  
+                    <li><a href="#Contact">Réserver une table</a></li>
+                </ul>
+            </div>
+        </div>
+      
+        </section>
+    </header>
+            <section class="containerImageBH">
+                <div>
+                    
+                    <a>
+                        <img src="asset/05.avif" type="image" width="2000"  >
+                        </a>
+                    
+                </div>	
+    </section>
+
+
+    <section>
+        <div class="container"> 
+            
+           
+        </div>
+        
+        
+        <div class="containerBlock">
+            <div  class="gallery">
+                
+            </div>
+            <div class="container"> 
+             
+            
+        
+            
+        </div>
+            
+        </div>
+    
+    </section>
+
+    <a id="Àproposdemoi"></a>
+    <div class="container">
+    <link rel="stylesheet" type="text/css" href="css/bts_section.css" />
+			
+			<section class="section" id="bts_section">
+				<div class="content">
+					
+					</div>
+                    <div class="bojackgif">
+                        <div  class="gallery">
+                        <div class="containerBlock"
+                        
+                            
+                    </div>
+                        </div>
+                    </div>
+					<h3 class="subsection_title">Présentation</h3>
+                     
+					<div class="bts_content">
+                        
+						<!-- Bloc SLAM -->
+						<div class="bts_option">
+							<div>
+								
+							</div>
+							<div>
+								<h3 class="bts_subsection"></h3>
+								<p class="p_1">
+									Los Pollos Hermanos est une chaîne de restaurants de fast-food réputée pour son poulet frit délicieux et ses recettes uniques. 
+                            <br>Fondée par Gustavo Fring, l'enseigne s'est rapidement développée grâce à son engagement envers la qualité des ingrédients et un service client exceptionnel.
+                            <br>Chaque restaurant Los Pollos Hermanos offre une atmosphère accueillante, où les clients peuvent déguster des repas savoureux dans un cadre convivial. 
+                            Connue pour ses plats emblématiques comme les tenders de poulet croustillants et les sauces maison,
+                             la chaîne est devenue un favori pour les amateurs de cuisine rapide et bien préparée.
+								</p>
+							</div>
+						</div>
+
+						<!-- Bloc SISR -->
+						<div class="bts_option">
+							<div>
+                                <a>
+                                    <img src="asset/03.jpg" type="image" width="250px"  >
+                                    </a>
+							</div>
+							<div>
+								
+								<p class="">
+                                    <div>
+                                   
+                                            <h3 class="bts_subsection">Gustavo Fring entouré de ses employés</h3>
+                                    </div>	
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+			</section>
+    </section>
+    <a id="BTSSIO"></a>
+    <section>
+        <div class="container">
+
+            <a id="Projets"></a>
+                <div  class="titre">
+                    <h3 class="subsection_title">Carte</h3>
+                </div>
+                <div class="gallery">
+                    <img style="--i:1" class="photo1" src="asset/02.jpg" alt="Screenshot du profil Discord de Winnter ">
+                </div>
+                <div class="smallspacer" ></div>
+            <div>
+
+            </div>
+            
+      </section>
+
+      <div class="littlespacer"></div>
+      <section>
+        <div class="container"> 
+
+            <div class="titre">
+                <h1 id="Contact">Réserver une table</h1>
+            </div>
+
+      </section>
+      <section id="reservation">
+        <div class="container"> 
+            <div class="titre">
+                <h3>Formulaire de Réservation</h3>
+            </div>
+            
+            
+                <div class="form-container">
+                    <div class="form-group">
+                        <label for="name"><b>Nom:</b></label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="smallspacer" ></div>
+                    <div class="form-group">
+                        <label for="date"><b>Date:</b></label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="smallspacer" ></div>
+                    <div class="form-group">
+                        <label for="time"><b>Heure:</b></label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                    <div class="smallspacer" ></div>
+                    <div class="form-group">
+                        <label for="email"><b>Adresse Email:</b></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="smallspacer" ></div>
+                    <div class="form-group button-container">
+                        <button type="submit">Réserver</button>
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+    </section>
+    
+    <script>
+    document.getElementById('reservationForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Empêche l'envoi du formulaire pour valider d'abord
+        
+        const name = document.getElementById('name').value;
+        const date = document.getElementById('date').value;
+        const time = document.getElementById('time').value;
+        const email = document.getElementById('email').value;
+    
+        // Convertir les entrées de date et heure en objets Date
+        const selectedDate = new Date(date);
+        const now = new Date();
+    
+        // Validation pour la date passée
+        if (selectedDate.setHours(0, 0, 0, 0) < now.setHours(0, 0, 0, 0)) {
+            alert("Vous ne pouvez pas réserver pour une date passée.");
+            return;
+        }
+    
+        // Validation pour l'heure (entre 10h et 22h)
+        const selectedTime = time.split(':');
+        const selectedHour = parseInt(selectedTime[0]);
+    
+        if (selectedHour < 10 || selectedHour > 22) {
+            alert("Les réservations sont possibles uniquement entre 10h et 22h.");
+            return;
+        }
+    
+        if (name && date && time && email) {
+            this.submit(); // Si tout est correct, on soumet le formulaire
+        } else {
+            alert("Veuillez remplir tous les champs.");
+        }
+    });
+    </script>
+    
+
+    <footer>
+        &copy; 2024 Los pollos  - All rights reserved
+    </footer>
+    
+    <script>
+        $(document).ready(function() {
+  $('a[href^="#"]').on('click', function(e) {
+    var target = $(this).attr('href');
+    var targetPosition = $(target).offset().top - $('header').height();
+
+
+    $('html, body, header').animate({
+      scrollTop: targetPosition
+    }, 1500); // Durée du défilement en millisecondes
+
+    return false; // Empêche le comportement par défaut du lien
+  });
+});
+
+$(document).ready(function() {
+  $("img").on("load", function() {
+    $(this).parent().parent().addClass("loaded");
+  });
+});
+
+    </script>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#reservationForm').on('submit', function(e) {
+        e.preventDefault(); // Empêche le comportement par défaut
+
+        var formData = $(this).serialize(); // Récupère les données du formulaire
+
+        $.ajax({
+            type: 'POST',
+            url: 'reservation_handler.php', // Envoie vers le script PHP
+            data: formData,
+            success: function(response) {
+                alert('Votre réservation a été envoyée avec succès !');
+                window.location.href = 'index.html'; // Redirige vers la page d'accueil après succès
+            },
+            error: function() {
+                alert('Erreur lors de l\'envoi. Veuillez réessayer.');
+            }
+        });
+    });
+});
+</script>
+
+
+</body>
+</html>
