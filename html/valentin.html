@@ -1,0 +1,79 @@
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine's</title>
+  <link rel="stylesheet" href="valetin.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+  <style>
+    .code-signature {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-family: 'Arial', sans-serif;
+      color: rgba(255, 105, 180, 0.7);
+      font-size: 1em;
+      text-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+      letter-spacing: 2px;
+      font-weight: bold;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+
+    .code-signature:hover {
+      opacity: 1;
+      text-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="start-screen">
+    <div class="title-container">
+      <div class="title-wrapper">
+        <h1 class="main-title">Saint Valentin</h1>
+        <div class="title-overlay"></div>
+      </div>
+      <h2 class="sub-title">la symphonie des amoureux </h2>
+      <button class="start-button" onclick="launchExperience()">
+        <span class="button-text">❤ Commencer la magie  ❤</span>
+        <div class="button-shine"></div>
+      </button>
+      <div class="floating-hearts">
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+      </div>
+    </div>
+    <div class="code-signature">CODE par evan cattarossi</div>
+  </div>
+
+  <div class="scene">
+    <div class="valentine-text">
+      <div class="main-text">joyeuse saint valentin</div>
+    </div>
+  </div>
+  <div class="loading-screen">Attendez quelques secondes.</div>
+  <script type="module" src="diamond-heart.js"></script>
+</body>
+
+</html>
