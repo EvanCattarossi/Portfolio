@@ -44,15 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             imageUrl: "assets/img/gsb.png",
            
         },
-        {
-            id: 7, // Correction de l'ID pour éviter les doublons
-            title: "LOS POLLOS HERMANOS",
-            description: "Ce projet est un projet de vitrine de restaurant inspiré de la série Breaking Bad , il  été réalisé en groupe",
-            languages: ["HTML", "CSS","Java","PHP"],
-            imageUrl: "html/assets/img/Los_POLLOS.webp",
-            downloadLink: "https://github.com/EvanCattarossi/Los-Pollos-Hermanos.git",
-            visitLink: "html/websiteLPH.html",
-        }
+        
     ];
 
     const galleryItems = document.getElementById('circle-gallery-items');
