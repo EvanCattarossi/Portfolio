@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             id: 2,
             title: "Serveur de fichier ",
             description: "Voici mon projet d'entreprise qui consiste a crée un serveur de fichier pour les écoles qui font parti de la CAPI.",
-            languages: ["Active diretory", "GPO"],
+            languages: ["Active diretory", "GPO","Script Powwershell"],
             imageUrl: "assets/img/svfichier.jpg",
             visitLink: "html/capi.html",
         },
