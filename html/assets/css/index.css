@@ -1,0 +1,1017 @@
+
+
+/* Réinitialisation et style de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Un dégradé subtil */
+    color: white;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Logo container */
+.logo-container img {
+    height: 50px; /* Ajuste la hauteur du logo */
+    transition: transform 0.3s ease; /* Transition douce pour l'animation */
+}
+
+.logo-container img:hover {
+    transform: scale(1.1); /* Effet de zoom sur le logo au survol */
+}
+
+/* ---- Navbar Styles ---- */
+/* Navbar Fixe */
+.navbar-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fond légèrement transparent pour un effet moderne */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Ombre plus marquée pour donner de la profondeur */
+    z-index: 1000;
+    padding: 10px 0;
+    transition: background 0.3s ease; /* Transition pour un changement de couleur doux lors du scroll */
+}
+
+/* Fond de la navbar plus clair au scroll */
+.navbar-container.scrolled {
+    background: rgba(0, 0, 0, 1); /* Fond noir solide lorsque la page est défilée */
+}
+
+/* Conteneur et alignement */
+.boxed {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Flexbox pour aligner les éléments */
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style du logo */
+.logo h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #f1f1f1;
+    letter-spacing: 1px; /* Espacement des lettres pour une meilleure lisibilité */
+    transition: color 0.3s ease;
+}
+
+.logo h1:hover {
+    color: #00bfff; /* Un bleu lumineux pour l'effet hover */
+}
+
+/* Navbar - Liste */
+.nav-bar {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-bar li {
+    display: inline-block;
+}
+
+/* Lien de navigation */
+.nav-bar a {
+    text-decoration: none;
+    color: #f1f1f1;
+    font-weight: 500;
+    padding: 12px 18px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    text-transform: uppercase; /* Met les liens en majuscule pour un effet plus professionnel */
+}
+
+.nav-bar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #00bfff;
+    transform: scale(1.05); /* Légère animation pour un effet dynamique */
+}
+
+/* Ajouter un effet de transition à la navbar lors du scroll */
+@media (max-width: 768px) {
+    .navbar-container.scrolled {
+        background: rgba(0, 0, 0, 0.9); /* Moins transparent lorsque la page est défilée */
+    }
+}
+
+/* Menu Toggle pour mobile */
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* Rendre le menu burger visible sur les petits écrans */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-bar {
+        display: none; /* Cacher le menu par défaut */
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .nav-bar.active {
+        display: block; /* Afficher le menu quand actif */
+    }
+
+    .nav-bar li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .nav-bar a {
+        padding: 15px;
+    }
+}
+
+
+/* ---- Menu Toggle (Mobile) ---- */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* ---- Sections Styling ---- */
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Accueil Section */
+.acc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.acc img {
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 20px;
+}
+
+.acc h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.acc h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #d1d1d1;
+}
+
+/* ---- Boutons & Social Icons ---- */
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center; /* Aligner les icônes à droite */
+}
+
+
+.footer-social a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-social a img:hover {
+    transform: scale(1.1);
+}
+
+.cv-button-container {
+    margin-top: 20px;
+}
+
+.cv-btn {
+    display: inline-block;
+    background: #00bfff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.cv-btn:hover {
+    background: #008ecc;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 15px;
+        border-radius: 5px;
+        text-align: right;
+    }
+
+    .nav-bar.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+/* ---- Section BTS SIO ---- */
+.facts {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #e0e0e0;
+}
+
+/* ---- Spécialités BTS ---- */
+/* ---- Section Spécialités BTS ---- */
+.spec_bts {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/* ---- Styles généraux pour SISR et SLAM ---- */
+.bts_sisr, .bts_slam {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 500px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: left; /* Alignement du texte */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ---- Effet au survol ---- */
+.bts_sisr:hover, .bts_slam:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Titres des options ---- */
+.bts_sisr h4, .bts_slam h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #ffcc00;
+    display: flex;
+    align-items: center;
+}
+
+.bts_sisr h4 i, .bts_slam h4 i {
+    font-size: 28px;
+    margin-right: 10px;
+}
+
+/* ---- Texte général ---- */
+.bts_sisr h6, .bts_slam h6 {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #f1f1f1;
+}
+
+/* ---- Listes de métiers ---- */
+.bts_sisr ul, .bts_slam ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.bts_sisr ul li, .bts_slam ul li {
+    font-size: 14px;
+    color: #d1d1d1;
+    margin-bottom: 5px;
+    list-style: none;
+}
+
+/* Icônes des listes */
+.bts_sisr ul li i, .bts_slam ul li i {
+    color: #ffcc00;
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+/* ---- Effet spécial SLAM ---- */
+.feure {
+    font-size: 14px;
+    color: #ff5733;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* ---- Effet Neon SLAM ---- */
+.neon2 {
+    color: #00ffcc;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px #00ffcc;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    .spec_bts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bts_sisr, .bts_slam {
+        max-width: 90%;
+        text-align: center; /* Centre le texte en mobile */
+    }
+
+    .bts_sisr h4, .bts_slam h4 {
+        justify-content: center;
+    }
+}
+
+
+
+
+/* ---- Section Parcours ---- */
+.experience {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.experience h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* ---- Timeline principale ---- */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ---- Ligne verticale centrale ---- */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: rgba(255, 255, 255, 0.5);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+/* ---- Items de la timeline ---- */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* ---- Style des contenus ---- */
+.timeline-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* ---- Animation au survol ---- */
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Titres ---- */
+.timeline-content h3 {
+    font-size: 20px;
+    color: #ffcc00;
+    margin-bottom: 5px;
+}
+
+.timeline-content h4 {
+    font-size: 18px;
+    color: #00bfff;
+    margin-bottom: 10px;
+}
+
+.timeline-content p, .timeline-content ul {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #f1f1f1;
+}
+
+/* ---- Points sur la ligne centrale ---- */
+.timeline-item::after {
+    content: '•';
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+/* ---- Alternance gauche / droite ---- */
+.left {
+    left: 0;
+    text-align: right;
+    padding-right: 40px;
+}
+
+.right {
+    left: 50%;
+    text-align: left;
+    padding-left: 40px;
+}
+
+/* ---- Responsive pour mobiles ---- */
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 0;
+        text-align: left;
+    }
+
+    .left, .right {
+        left: 0;
+    }
+
+    .timeline-item::after {
+        left: 20px;
+    }
+}
+
+
+/* ---- Section Compétences ---- */
+.skills {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.skills h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.skills p {
+    font-size: 16px;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+/* ---- Bouton de fiche de synthèse ---- */
+.cv-button-container {
+    margin-bottom: 30px;
+}
+
+.synthese-btn {
+    background: #ffcc00;
+    color: #222;
+    padding: 12px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.synthese-btn:hover {
+    background: #e6b800;
+    transform: scale(1.05);
+}
+
+/* ---- Slider contenant les cartes ---- */
+.skills-slider {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* ---- Cartes de compétences ---- */
+.skill-card {
+    width: 180px;
+    height: 220px;
+    perspective: 1000px;
+}
+
+.flipper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+}
+
+.skill-card:hover .flipper {
+    transform: rotateY(180deg);
+}
+
+/* ---- Face avant des cartes ---- */
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    text-align: center;
+    padding: 15px;
+}
+
+.front {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    flex-direction: column;
+}
+
+.front img {
+    max-width: 80px;
+    margin-bottom: 10px;
+}
+
+.front h3 {
+    font-size: 18px;
+    color: #ffcc00;
+}
+
+/* ---- Face arrière des cartes ---- */
+.back {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    transform: rotateY(180deg);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ---- Responsive design ---- */
+@media (max-width: 768px) {
+    .skills-slider {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-card {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+
+
+
+/* SECTION galery projet  */
+#projet {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    padding-bottom: 80px; /* Augmentation du padding pour plus d'espace */
+}
+
+.circle-gallery {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.circle-gallery-items {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.circle-gallery-items img {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    bottom: 20px; /* Ajout de la propriété bottom pour remonter les icônes */
+}
+
+.circle-gallery-items img:hover {
+    transform: scale(1.1);
+}
+
+.project-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    visibility: hidden;
+    transition: visibility 0.3s ease;
+}
+
+.circle-gallery-items img:hover + .project-title {
+    visibility: visible;
+}
+
+/* ... (le reste de votre CSS reste inchangé) ... */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+    color: black; /* Ajout de la couleur noire pour les écrans plus grands */
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-column {
+    flex-basis: 48%;
+}
+
+.modal-column h3 {
+    margin-bottom: 10px;
+}
+
+.modal-column p {
+    margin-bottom: 15px;
+}
+
+.modal-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-buttons a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 0;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.modal-buttons a.btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .modal-columns {
+        flex-direction: column;
+    }
+
+    .modal-column {
+        flex-basis: 100%;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+        color: black;
+    }
+}
+
+
+/* Veille Technologique */
+#veilles-technologiques {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    text-align: center;
+}
+
+.section-title .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Conteneur principal pour le défilement */
+.portfolio-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 80px 0;
+    scroll-snap-type: x mandatory;
+    justify-content: center; /* Centrer les veilles */
+    overflow-x: hidden; /* Empêche le décalage vers la gauche */
+}
+
+/* Carte individuelle */
+.rn-portfolio-slick {
+    flex: 0 0 auto;
+    width: 300px;
+    margin: 0 15px;
+    background: rgb(247, 247, 247);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rn-portfolio-slick:hover {
+    transform: translateY(-8px);
+}
+
+/* Image cliquable avec cadre */
+.thumbnail a {
+    display: block;
+    width: 100%;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+    border: 4px solid #ffffff; /* Cadre blanc autour de l'image */
+    border-radius: 12px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Effet d'ombre pour un léger relief */
+    transition: transform 0.3s ease-in-out;
+}
+
+.rn-portfolio-slick:hover .thumbnail img {
+    transform: scale(1.05);
+}
+
+/* Contenu texte */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.category-info {
+    font-size: 0.9rem;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.title a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.title a:hover {
+    color: #ff4081;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+#footer {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff; /* White text color */
+    padding: 20px 0;
+    font-family: sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-section h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+}
+
+.footer-section p {
+    line-height: 1.6;
+}
+
+.footer-separator {
+    width: 1px;
+    background-color: #555;
+    height: auto; /* Adjust as needed */
+}
+
+.footer-section.center button {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.footer-section.center button:hover {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+.footer-section.right iframe {
+    width: 100%;
+    height: 150px; /* Adjust as needed */
+    border: 0;
+}
+
+.footer-section.contact {
+    padding: 0 20px;
+    text-align: left;
+}
+
+.footer-section.contact h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+}
+
+.footer-section.contact p {
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+/* Style de base pour les boutons de contact */
+.footer-section.contact .contact-button {
+    display: inline-block; /* Permet de contrôler la largeur et la hauteur */
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff; /* Couleur du texte du bouton */
+    padding: 10px 15px; /* Espacement intérieur du bouton */
+    text-decoration: none; /* Supprime le soulignement */
+    border-radius: 5px; /* Coins arrondis */
+    margin-right: 10px; /* Ajoute un peu d'espace à droite du bouton */
+    transition: background-color 0.3s ease; /* Transition douce pour l'effet de survol */
+}
+
+
+
+
+
+/* Responsive design (optional) */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .footer-separator {
+        display: none; /* Hide separators on smaller screens */
+    }
+
+    .footer-section.center .footer-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Media query pour une mise en page responsive */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Les sections s'empilent verticalement sur les petits écrans */
+        align-items: center; /* Centrage des sections sur les petits écrans */
+    }
+
+    .footer-section {
+        text-align: center; /* Texte centré sur les petits écrans */
+        padding: 20px 0; /* Espacement plus important entre les sections */
+    }
+
+    .footer-separator {
+        display: none; /* Les séparateurs sont masqués sur les petits écrans */
+    }
+}
