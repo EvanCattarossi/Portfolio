@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
           {
             id: 5,
             title: "Jeu Devine le mot ",
-            description: "voici un mini jeu devine le mot , les mot sont en rapport avec le webdesign .",
+            description: "voici un mini jeu devine le mot que j'ai codé lors de mon apprentissage sur openclassroom et des connaissances personnels , les mots sont en rapport avec le webdesign .",
             languages: ["CSS", "HTML", "JS"],
             imageUrl: "assets/img/logo.png",
             visitLink: "html/jeu.html",
