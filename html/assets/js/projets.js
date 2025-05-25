@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
             languages: ["HTML", "PHP", "CSS", "ChartJS", "JS"],
             imageUrl: "assets/img/gsb.png",
             downloadLink: "https://github.com/EvanCattarossi/GSB-WEB.git",
-            visitLink: "http://cattarossievan.free.nf/",
+            visitLink: "https://cattarossievan.alwaysdata.net/",
             docLink: "https://github.com/user-attachments/files/20392069/dossier.GSb.WEB.Evan.CATTAROSSI.3.pdf"
         },
         {
