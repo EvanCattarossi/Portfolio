@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             description: "Ce projet vise à développer une application mobile sécurisée pour la gestion des frais professionnels au sein du laboratoire GSB. Conçue pour une utilisation terrain, l’application permet aux visiteurs médicaux de saisir leurs fiches de frais en temps réel, directement depuis leur smartphone. Les comptables peuvent consulter et traiter les demandes de remboursement de manière efficace. L’administrateur bénéficie quant à lui d’un accès aux fonctionnalités de gestion des utilisateurs (ajout, suppression) et à des statistiques globales pour suivre l'activité. L’application mobile est pensée pour être rapide, intuitive et parfaitement adaptée aux besoins de mobilité des utilisateurs, tout en respectant les niveaux d’accès propres à chaque rôle..",
             languages: ["API", "Java", "Android Studio"],
             imageUrl: "assets/img/gsb.png",
-            downloadLink: "https://github.com/EvanCattarossi/GSB-mob.git",
+            downloadLink: "html/assets/SRC/Mobile2.zip",
             docLink: "https://github.com/user-attachments/files/20391849/dossier_mobile_Evan.CATTAROSSI.1.pdf"
         },
           {
